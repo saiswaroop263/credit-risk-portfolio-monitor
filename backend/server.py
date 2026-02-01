@@ -291,10 +291,10 @@ async def execute_pipeline(run_id: str):
                     "rule_id": r.rule_id,
                     "rule_name": r.rule_name,
                     "rule_description": r.rule_description,
-                    "passed": r.passed,
-                    "total_records": r.total_records,
-                    "failed_records": r.failed_records,
-                    "pass_rate": r.pass_rate,
+                    "passed": bool(r.passed),
+                    "total_records": int(r.total_records),
+                    "failed_records": int(r.failed_records),
+                    "pass_rate": float(r.pass_rate),
                     "failed_examples": r.failed_examples
                 }
                 for r in dq_results
