@@ -1,0 +1,175 @@
+{
+  "identity": {
+    "name": "E1: The Anti-AI Designer",
+    "mission": "Create a Credit Risk Portfolio Monitor that feels like a high-end financial instrument, not a generic dashboard.",
+    "principles": [
+      "Fusion over Imitation: Mix Swiss Print Design with Financial Precision.",
+      "Emotion First: Trust, Clarity, and Authority.",
+      "Content is King: Data is the hero. Every pixel must serve the metric.",
+      "Negative Space: Use whitespace to indicate luxury and clarity."
+    ]
+  },
+  "typography": {
+    "fonts": {
+      "headings": {
+        "family": "Manrope",
+        "weights": ["600", "700", "800"],
+        "usage": "Page titles, Card headers, KPI values",
+        "fallback": "sans-serif"
+      },
+      "body": {
+        "family": "Public Sans",
+        "weights": ["400", "500"],
+        "usage": "General text, labels, table data",
+        "fallback": "sans-serif"
+      },
+      "mono": {
+        "family": "JetBrains Mono",
+        "weights": ["400", "500"],
+        "usage": "Code snippets, IDs, precise numerical data in tables",
+        "fallback": "monospace"
+      }
+    },
+    "rules": [
+      "Headings > 32px must use tracking-tight (-0.02em).",
+      "Overlines/Labels must be Uppercase + text-xs + tracking-widest (0.1em).",
+      "Never use Inter for headings.",
+      "Use tabular-nums class for all financial data to ensure alignment."
+    ]
+  },
+  "colors": {
+    "theme": "light",
+    "palette": {
+      "background": {
+        "default": "#FFFFFF",
+        "subtle": "#F8FAFC",
+        "paper": "#FFFFFF"
+      },
+      "foreground": {
+        "default": "#0F172A",
+        "muted": "#64748B",
+        "inverse": "#FFFFFF"
+      },
+      "primary": {
+        "default": "#0F172A",
+        "foreground": "#FFFFFF",
+        "hover": "#1E293B"
+      },
+      "secondary": {
+        "default": "#F1F5F9",
+        "foreground": "#0F172A"
+      },
+      "accent": {
+        "default": "#2563EB",
+        "foreground": "#FFFFFF"
+      },
+      "risk": {
+        "high": "#DC2626",
+        "medium": "#F59E0B",
+        "low": "#16A34A"
+      },
+      "border": {
+        "default": "#E2E8F0",
+        "subtle": "#F1F5F9"
+      }
+    },
+    "forbidden": [
+      "#1B93A4",
+      "#7351B7",
+      "Gradients for text",
+      "Pure Black (#000000)"
+    ]
+  },
+  "layout": {
+    "grid_system": "Bento Grid Mode B (High Density)",
+    "spacing": {
+      "base": "Generous. Use p-6 or p-8 for cards.",
+      "gap": "gap-6 for dashboard grids.",
+      "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+    },
+    "rules": [
+      "Mobile-First: Start with grid-cols-1.",
+      "Desktop: grid-cols-4 or grid-cols-12.",
+      "Every pixel utilized. Use h-full on children.",
+      "No jagged bottoms in dashboard grids."
+    ]
+  },
+  "components": {
+    "style_overrides": {
+      "radius": "rounded-md",
+      "shadows": "shadow-sm",
+      "borders": "border border-border"
+    },
+    "cards": {
+      "style": "Flat with 1px border (Grid Borders style). No heavy shadows.",
+      "hover": "border-primary/20 transition-colors duration-200"
+    },
+    "buttons": {
+      "primary": "bg-primary text-primary-foreground hover:bg-primary/90 rounded-md px-4 py-2 font-medium",
+      "secondary": "bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-md px-4 py-2 font-medium",
+      "ghost": "hover:bg-accent hover:text-accent-foreground"
+    },
+    "inputs": {
+      "style": "bg-background border-input ring-offset-background focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": {
+      "usage": "Sticky Headers, Floating Filters",
+      "classes": "bg-white/80 backdrop-blur-md border-b border-white/20"
+    },
+    "textures": {
+      "usage": "Subtle noise on dashboard background (optional)",
+      "opacity": "opacity-[0.02]"
+    },
+    "motion": {
+      "hover": "transition-all duration-200 ease-out",
+      "enter": "animate-in fade-in zoom-in-95 duration-300"
+    }
+  },
+  "images": {
+    "login_background": {
+      "url": "https://images.unsplash.com/photo-1765366417046-f46361a7f26f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwYnJpZ2h0JTIwb2ZmaWNlJTIwd29ya3NwYWNlJTIwcHJvZmVzc2lvbmFsfGVufDB8fHx8MTc2OTk4NTIyM3ww&ixlib=rb-4.1.0&q=85",
+      "alt": "Modern minimalist office space"
+    },
+    "empty_state": {
+      "url": "https://images.unsplash.com/photo-1758630737361-ca7532fb5e7f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwyfHxtaW5pbWFsaXN0JTIwYnJpZ2h0JTIwb2ZmaWNlJTIwd29ya3NwYWNlJTIwcHJvZmVzc2lvbmFsfGVufDB8fHx8MTc2OTk4NTIyM3ww&ixlib=rb-4.1.0&q=85",
+      "alt": "Clean workspace"
+    }
+  },
+  "instructions_to_main_agent": {
+    "general": [
+      "Use 'Manrope' for all headings and 'Public Sans' for body text.",
+      "Implement the 'Bento Grid' layout for the main dashboard.",
+      "Ensure all financial numbers use 'tabular-nums' for alignment.",
+      "Use the specified color palette. Do NOT use Teal (#1B93A4).",
+      "Add 'data-testid' to all interactive elements.",
+      "Use 'sonner' for toast notifications.",
+      "Use 'recharts' for all charts, styled to match the minimal theme (no grid lines, simple tooltips)."
+    ],
+    "files": {
+      "css": "/app/frontend/src/index.css",
+      "tailwind": "/app/frontend/tailwind.config.js"
+    },
+    "libraries": [
+      "lucide-react",
+      "recharts",
+      "clsx",
+      "tailwind-merge",
+      "sonner"
+    ]
+  },
+  "universal_guidelines": {
+    "do_not": [
+      "Do not use gradients for text.",
+      "Do not use 'Inter' for headings.",
+      "Do not use generic centered layouts.",
+      "Do not use AI assistant emojis."
+    ],
+    "must": [
+      "Create depth through layered design elements.",
+      "Use 2-3x more spacing than feels comfortable.",
+      "Add micro-animations to every interaction."
+    ]
+  }
+}
