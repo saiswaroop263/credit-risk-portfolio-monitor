@@ -242,7 +242,7 @@ export default function DQDrift() {
                       </tr>
                     </thead>
                     <tbody>
-                      {driftReport.features.map((feature) => (
+                      {(driftReport.features || []).map((feature) => (
                         <tr key={feature.feature_name}>
                           <td className="font-medium">{feature.feature_name.replace(/_/g, ' ')}</td>
                           <td className="tabular-nums font-mono">{feature.psi_score.toFixed(4)}</td>
