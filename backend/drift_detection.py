@@ -111,14 +111,14 @@ class DriftDetector:
             current_values = current_df[feature].values
             
             psi_score = calculate_psi(baseline_values, current_values)
-            drift_detected = psi_score >= self.PSI_THRESHOLD
+            drift_detected = bool(psi_score >= self.PSI_THRESHOLD)
             
             if drift_detected:
                 overall_drift = True
             
             results.append({
                 "feature_name": feature,
-                "psi_score": psi_score,
+                "psi_score": float(psi_score),
                 "drift_detected": drift_detected,
                 "baseline_distribution": get_distribution_buckets(baseline_values),
                 "current_distribution": get_distribution_buckets(current_values),
@@ -130,7 +130,7 @@ class DriftDetector:
         return {
             "total_features": len(results),
             "drifted_features": sum(1 for r in results if r["drift_detected"]),
-            "overall_drift_detected": overall_drift,
+            "overall_drift_detected": bool(overall_drift),
             "features": results
         }
 
