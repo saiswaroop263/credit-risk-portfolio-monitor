@@ -198,10 +198,10 @@ export default function DQDrift() {
                         contentStyle={{ borderRadius: '6px', border: '1px solid #E2E8F0' }}
                       />
                       <Bar dataKey="psi" radius={[0, 4, 4, 0]}>
-                        {driftReport.features.map((entry, index) => (
+                        {(driftReport.features || []).map((entry, index) => (
                           <Cell 
                             key={`cell-${index}`} 
-                            fill={entry.drift_detected ? '#DC2626' : entry.psi_score >= 0.1 ? '#F59E0B' : '#16A34A'} 
+                            fill={entry.drift_detected ? '#DC2626' : (entry.psi_score >= 0.1 ? '#F59E0B' : '#16A34A')} 
                           />
                         ))}
                       </Bar>
