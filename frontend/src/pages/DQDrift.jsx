@@ -183,11 +183,11 @@ export default function DQDrift() {
                 <div className="h-[400px]">
                   <ResponsiveContainer width="100%" height="100%">
                     <BarChart 
-                      data={driftReport.features.map(f => ({
-                        name: f.feature_name.replace(/_/g, ' '),
-                        psi: f.psi_score,
-                        status: f.drift_detected ? 'drift' : f.psi_score >= 0.1 ? 'warning' : 'stable'
-                      }))}
+                      data={driftReport.features?.map(f => ({
+                        name: f.feature_name?.replace(/_/g, ' ') || 'Unknown',
+                        psi: f.psi_score || 0,
+                        status: f.drift_detected ? 'drift' : (f.psi_score >= 0.1 ? 'warning' : 'stable')
+                      })) || []}
                       layout="vertical"
                     >
                       <CartesianGrid strokeDasharray="3 3" stroke="#E2E8F0" horizontal={false} />
