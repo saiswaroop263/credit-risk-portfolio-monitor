@@ -439,8 +439,8 @@ async def execute_pipeline(run_id: str):
                     "status": RunStatus.COMPLETED.value,
                     "completed_at": datetime.now(timezone.utc).isoformat(),
                     "processed_records": len(df_features),
-                    "dq_passed": dq_passed,
-                    "drift_detected": drift_result['overall_drift_detected']
+                    "dq_passed": bool(dq_passed),
+                    "drift_detected": bool(drift_result['overall_drift_detected'])
                 }
             }
         )
