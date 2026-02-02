@@ -19,8 +19,8 @@ A full-stack web application for credit risk analysis, monitoring, and reporting
 │                          BACKEND (FastAPI)                               │
 │  ┌──────────────────────────────────────────────────────────────────┐   │
 │  │                         API Endpoints                              │   │
-│  │  POST /upload  POST /runs/{id}/execute  POST /demo                │   │
-│  │  GET /runs     GET /kpis    GET /scores    GET /dq    GET /drift  │   │
+│  │  POST /api/upload  POST /api/runs/{run_id}/execute  POST /api/demo                │   │
+│  │  GET /api/runs     GET /api/kpis    GET /api/scores    GET /api/dq    GET /api/drift  │   │
 │  └──────────────────────────────────────────────────────────────────┘   │
 │  ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐          │
 │  │   ETL   │ │   DQ    │ │   ML    │ │  Drift  │ │  Demo   │          │
