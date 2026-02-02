@@ -1,4 +1,6 @@
 # Credit Risk Portfolio Monitor
+**Live Demo (Preview):** [Open the app](https://creditrisk-monitor.preview.emergentagent.com)
+**GitHub Repo:** https://github.com/saiswaroop263/credit-risk-portfolio-monitor
 
 A full-stack web application for credit risk analysis, monitoring, and reporting. Upload loan data, run ML models, and visualize portfolio risk metrics through an intuitive dashboard.
 
