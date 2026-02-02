@@ -27,12 +27,15 @@ from drift_detection import run_drift_detection
 from demo_data import generate_demo_data
 
 ROOT_DIR = Path(__file__).parent
+
+# Load .env file for local development (won't override existing env vars)
 load_dotenv(ROOT_DIR / '.env')
 
-# MongoDB connection
-mongo_url = os.environ['MONGO_URL']
+# MongoDB connection - read from environment variables
+mongo_url = os.environ.get('MONGO_URL', 'mongodb://localhost:27017')
+db_name = os.environ.get('DB_NAME', 'credit_risk_db')
 client = AsyncIOMotorClient(mongo_url)
-db = client[os.environ['DB_NAME']]
+db = client[db_name]
 
 # Create the main app
 app = FastAPI(title="Credit Risk Portfolio Monitor API")
