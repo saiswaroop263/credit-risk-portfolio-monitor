@@ -2,7 +2,7 @@
 
 A full-stack web application for credit risk analysis, monitoring, and reporting. Upload loan data, run ML models, and visualize portfolio risk metrics through an intuitive dashboard.
 
-![Dashboard Preview](screenshots/dashboard.png)
+
 
 ## Architecture
 
@@ -58,6 +58,12 @@ A full-stack web application for credit risk analysis, monitoring, and reporting
 - **Risk Segments**: Distribution by Low/Medium/High risk
 - **Model Comparison**: Side-by-side performance analysis
 - **DQ & Drift Reports**: Pass/fail status for all checks
+
+## Screenshots
+![Dashboard Overview](screenshots/dashboard-overview.jpg)
+![Model Performance](screenshots/model-performance.jpg)
+![Data Quality Rules](screenshots/dq-rules.jpg)
+![Drift (PSI)](screenshots/drift-psi.jpg)
 
 ## Tech Stack
 
