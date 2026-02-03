@@ -1,5 +1,5 @@
 # Credit Risk Portfolio Monitor
-**Live Demo (Preview):** [Open the app](https://credit-risk-portfolio-monitor-e5il366yw.vercel.app/)
+**Live Demo:** [Open the app](https://credit-risk-portfolio-monitor-e5il366yw.vercel.app/)
 **Backend API (Render):** https://credit-risk-backend-bvje.onrender.com/docs
 **GitHub Repo:** https://github.com/saiswaroop263/credit-risk-portfolio-monitor
 
@@ -76,7 +76,7 @@ A full-stack web application for credit risk analysis, monitoring, and reporting
 | Backend | FastAPI, Pydantic, pandas |
 | ML | scikit-learn, XGBoost |
 | Database | MongoDB with Motor (async) |
-| Deployment | Docker, Supervisor |
+| Deployment | Vercel (Frontend), Render (Backend), MongoDB Atlas (DB) |
 
 ## Quick Start
 
@@ -93,24 +93,18 @@ A full-stack web application for credit risk analysis, monitoring, and reporting
 ```bash
 docker start mongo 2>/dev/null || docker run -d --name mongo -p 27017:27017 mongo:6
 
-### Run Locally
 
 **Backend:**
 ```bash
 cd backend
+python3 -m venv venv
+source venv/bin/activate
 
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install dependencies
 pip install -r requirements.txt
 
-# Set environment variables
 export MONGO_URL="mongodb://localhost:27017"
 export DB_NAME="credit_risk"
 
-# Run the server
 uvicorn server:app --host 0.0.0.0 --port 8001 --reload
 ```
 
@@ -120,6 +114,7 @@ cd frontend
 npm install --legacy-peer-deps
 echo "REACT_APP_BACKEND_URL=http://localhost:8001" > .env
 npm start
+
 
 ### One-Click Demo
 
