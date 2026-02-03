@@ -1,5 +1,5 @@
 # Credit Risk Portfolio Monitor
-**Live Demo:** [Open the app](https://credit-risk-portfolio-monitor-e5il366yw.vercel.app/)
+**Live Demo:** https://credit-risk-portfolio-monitor-e5il366yw.vercel.app
 **Backend API (Render):** https://credit-risk-backend-bvje.onrender.com/docs
 **GitHub Repo:** https://github.com/saiswaroop263/credit-risk-portfolio-monitor
 
@@ -81,18 +81,16 @@ A full-stack web application for credit risk analysis, monitoring, and reporting
 ## Quick Start
 
 ### Prerequisites
-- Docker & Docker Compose
+- Docker (for MongoDB)
 - Node.js 18+ (for local frontend dev)
 - Python 3.11+ (for local backend dev)
-
-### Run with Docker
 
 ## Run Locally (Recommended)
 
 ### 1) Start MongoDB (Docker)
 ```bash
 docker start mongo 2>/dev/null || docker run -d --name mongo -p 27017:27017 mongo:6
-
+```
 
 **Backend:**
 ```bash
@@ -114,7 +112,7 @@ cd frontend
 npm install --legacy-peer-deps
 echo "REACT_APP_BACKEND_URL=http://localhost:8001" > .env
 npm start
-
+```
 
 ### One-Click Demo
 
