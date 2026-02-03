@@ -1,5 +1,6 @@
 # Credit Risk Portfolio Monitor
-**Live Demo (Preview):** [Open the app](https://creditrisk-monitor.preview.emergentagent.com)
+**Live Demo (Preview):** [Open the app](https://credit-risk-portfolio-monitor-e5il366yw.vercel.app/)
+**Backend API (Render):** https://credit-risk-backend-bvje.onrender.com/docs
 **GitHub Repo:** https://github.com/saiswaroop263/credit-risk-portfolio-monitor
 
 A full-stack web application for credit risk analysis, monitoring, and reporting. Upload loan data, run ML models, and visualize portfolio risk metrics through an intuitive dashboard.
@@ -86,17 +87,11 @@ A full-stack web application for credit risk analysis, monitoring, and reporting
 
 ### Run with Docker
 
+## Run Locally (Recommended)
+
+### 1) Start MongoDB (Docker)
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/credit-risk-monitor.git
-cd credit-risk-monitor
-
-# Start all services
-docker-compose up -d
-
-# Access the app
-open http://localhost:3000
-```
+docker start mongo 2>/dev/null || docker run -d --name mongo -p 27017:27017 mongo:6
 
 ### Run Locally
 
@@ -122,16 +117,9 @@ uvicorn server:app --host 0.0.0.0 --port 8001 --reload
 **Frontend:**
 ```bash
 cd frontend
-
-# Install dependencies
-yarn install
-
-# Set environment variables
+npm install --legacy-peer-deps
 echo "REACT_APP_BACKEND_URL=http://localhost:8001" > .env
-
-# Run development server
-yarn start
-```
+npm start
 
 ### One-Click Demo
 
