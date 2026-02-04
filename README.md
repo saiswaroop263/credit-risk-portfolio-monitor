@@ -63,10 +63,10 @@ A full-stack web application for credit risk analysis, monitoring, and reporting
 - **DQ & Drift Reports**: Pass/fail status for all checks
 
 ## Screenshots
-![Dashboard Overview](screenshots/dashboard-overview.jpg)
-![Model Performance](screenshots/model-performance.jpg)
-![Data Quality Rules](screenshots/dq-rules.jpg)
-![Drift (PSI)](screenshots/drift-psi.jpg)
+![Dashboard Overview](screenshots/dashboard-overview.png)
+![Model Performance](screenshots/model-performance.png)
+![Data Quality Rules](screenshots/dq-rules.png)
+![Drift (PSI)](screenshots/drift-psi.png)
 
 ## Tech Stack
 
